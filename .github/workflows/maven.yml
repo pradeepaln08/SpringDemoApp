@@ -13,7 +13,9 @@ jobs:
         run: pwd
         
       - name: Go to path
-        run: export PATH=$PATH:/target
+        run: | 
+              cd target/
+              ls -l
         
       - name: PWD
         run: pwd
