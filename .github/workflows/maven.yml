@@ -14,8 +14,8 @@ jobs:
         
       - name: Go to path
         run: | 
-              cd target/
-              ls -l
+              cd target
+              ls
         
       - name: PWD
         run: pwd
