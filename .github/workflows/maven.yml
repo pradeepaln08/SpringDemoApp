@@ -23,5 +23,6 @@ jobs:
       - name: Move to target folder
         run: |
           cd target
+          ls -a
       - name: Run Jar File
         run: java -jar SpringDemoApp.jar
