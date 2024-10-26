@@ -28,5 +28,5 @@ jobs:
       - name: Go to the folder
         run: |
             cd target
-            nohub java -jar SpringDemoApp.jar $      
+            start-process java -jar SpringDemoApp.jar 
 
