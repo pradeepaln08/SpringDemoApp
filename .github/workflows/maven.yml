@@ -21,10 +21,8 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml
       - name: List the current Directory
-        run: ls -a
+        run: ls
       - name: Move to target folder
-        run: |
-          cd target
-          ls -a
+        run: cd target
       - name: Run Jar File
         run: java -jar SpringDemoApp.jar
