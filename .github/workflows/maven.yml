@@ -11,4 +11,16 @@ jobs:
     steps:
       - name: PWD
         run: pwd
+
+      - name: Go to the folder
+        run: chdir target
+
+      - name: Go to the folder
+        run: cd target  
+        
+      - name: Go to the folder
+        run: chdir /SpringDemoApp/target/  
+      - name: PWD
+        run: pwd
+    
       
