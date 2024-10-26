@@ -13,7 +13,7 @@ jobs:
         run: pwd
         
       - name: Go to path
-        run: cd/
+        run: cd /
       
       - name: Go to path1
         run: cd C:\Users\91984\Documents\GitHub\SpringDemoApp\actions-runner\_work\SpringDemoApp\SpringDemoApp\target
