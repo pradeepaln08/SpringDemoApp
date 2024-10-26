@@ -28,8 +28,5 @@ jobs:
       - name: Go to the folder
         run: |
             cd target
-            pwd
-        
-      - name: Run Jar File
-        run: java -jar SpringDemoApp.jar
+            java -jar SpringDemoApp.jar       
 
