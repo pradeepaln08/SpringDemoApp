@@ -13,7 +13,7 @@ jobs:
         run: pwd
         
       - name: Go to path
-        run: path target
+        run: CD target
     
       - name: PWD
         run: pwd
