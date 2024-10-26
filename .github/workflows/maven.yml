@@ -11,12 +11,9 @@ jobs:
     steps:
       - name: PWD
         run: pwd
-
-      - name: Go to the folder
-        run: cd
-
-      - name: Go to the folder
-        run: cd target
+        
+      - name: Go to path
+        run: path target
     
       - name: PWD
         run: pwd
