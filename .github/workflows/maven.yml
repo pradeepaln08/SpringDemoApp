@@ -19,10 +19,10 @@ jobs:
           distribution: "temurin"
           cache: maven
       - name: Build with Maven
-        run: mvn -B package --file pom.xml
-      - name: List the current directory
-        run: ls -a
+        run: mvn -B package --file pom.xml      
       - name: Move to target folder
         run: cd target
+      - name: List the current directory
+        run: ls  
       - name: Run Jar File
         run: java -jar SpringDemoApp.jar
