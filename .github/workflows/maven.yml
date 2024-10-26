@@ -13,14 +13,11 @@ jobs:
         run: pwd
 
       - name: Go to the folder
-        run: chdir target
+        run: cd
 
       - name: Go to the folder
-        run: cd target  
-        
-      - name: Go to the folder
-        run: chdir /SpringDemoApp/target/  
+        run: cd target
+    
       - name: PWD
         run: pwd
     
-      
