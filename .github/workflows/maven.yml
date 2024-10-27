@@ -29,6 +29,6 @@ jobs:
         run: |
             cd target            
             Start-Job -ScriptBlock {
-              & java -jar SpringDempApp.jar >console.out 2>console.err
+              & java -jar SpringDemoApp.jar >console.out 2>console.err
             }
 
