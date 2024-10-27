@@ -27,6 +27,8 @@ jobs:
         
       - name: Go to the folder
         run: |
-            cd target
-            start-process java -Argumentlist '-jar', 'SpringDempApp.jar'
+            cd target            
+            Start-Job -ScriptBlock {
+              & java -jar SpringDempApp.jar >console.out 2>console.err
+            }
 
