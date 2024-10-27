@@ -28,5 +28,5 @@ jobs:
       - name: Go to the folder
         run: |
             cd target
-            start java -jar SpringDemoApp.jar
+            start-process java -Argumentlist '-jar', 'SpringDempApp.jar'
 
