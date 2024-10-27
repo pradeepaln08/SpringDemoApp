@@ -28,5 +28,5 @@ jobs:
       - name: Go to the folder
         run: |
             cd target            
-            Start-Process java -Argumentlist '-jar' , 'SpringDemoApp.jar' -wait -RedirectStandardOutput '.\console.out' -RedirectStandardError '.\console.err' -Timeout 1000
+            Start-Process java -Argumentlist '-jar' , 'SpringDemoApp.jar' -Timeout 1000 -RedirectStandardOutput '.\console.out' -RedirectStandardError '.\console.err'
 
