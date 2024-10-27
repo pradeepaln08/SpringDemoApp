@@ -28,6 +28,6 @@ jobs:
       - name: Go to the folder
         run: |
             cd target            
-             & java -jar SpringDemoApp.jar >console.out 2>console.err
+             Start-Process java -Argumentlist '-jar' , 'SpringDemoApp.jar' -wait -RedirectStandardOutput '.\console.out' -RedirectStandardError '.\console.err'
             
 
