@@ -1,0 +1,45 @@
+# This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
+# For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#apache-maven-with-a-settings-path
+
+name: Maven Package
+
+on:
+  watch:
+  #push
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+
+    runs-on: winrun01
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+    #- uses: actions/checkout@v4
+    - name: Set up JDK 11
+      uses: actions/setup-java@v4
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+        server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
+        settings-path: ${{ github.workspace }} # location for the settings.xml file
+
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml   
+
+    - name: commit and push to gitHub
+      run: |
+          cd target
+          copy SpringDemoApp.jar C:\Users\91984\Documents\GitHub\SpringDemoApp\target 
+          git pull
+          git add SpringDemoApp.jar          
+          git remote add origin github@github.com/pradeepln08/SpringDemoApp.git          
+          git commit -m 'files changed'            
+          git push -u origin main
+          
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
