@@ -25,7 +25,7 @@ jobs:
       - name: PWD
         run: pwd
         
-      - name: Go to the folder
+      - name: Move to target folder
         run: |
             cd target            
              Start-Process java -Argumentlist '-jar' , 'SpringDemoApp.jar' -wait -RedirectStandardOutput '.\console.out' -RedirectStandardError '.\console.err'
