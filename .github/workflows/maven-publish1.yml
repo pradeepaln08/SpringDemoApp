@@ -30,6 +30,14 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Publish to GitHub Packages Apache Maven
-      run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
+      #run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
+      run: |
+          cd target             
+          pwd
+          copy SpringDemoApp.jar C:\Users\91984\Documents\GitHub\SpringDemoApp\target 
+          git add SpringDemoApp.jar
+          git remote add origin github@github.com/pradeepln08/SpringDemoApp.git
+          git commit -m 'files changed'            
+          git push -u origin main
       env:
         GITHUB_TOKEN: ${{ github.token }}
