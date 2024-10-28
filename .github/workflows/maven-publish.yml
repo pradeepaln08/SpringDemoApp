@@ -4,6 +4,7 @@ on:
   #watch:
   push:
     branches: ["main"]
+
   pull_request:
     branches: ["main"]
 
@@ -19,23 +20,22 @@ jobs:
           java-version: "11"
           distribution: "temurin"
           cache: maven
-          env: 
-           gittoken = ${{ env.GITHUBTOKEN }}           
+          #env: gittoken = ${{ env.GITHUBTOKEN }}
 
       - name: Build with Maven
         run: mvn -B package --file pom.xml
-        
+
       - name: Working Directory
-        run: echo $gittoken       
-        
-      - name: Go to target folder
+        run: pwd
+
+      - name: commit and push to gitHub
         run: |
-            cd target             
-            pwd
-            copy SpringDemoApp.jar C:\Users\91984\Documents\GitHub\SpringDemoApp\target 
-            git add SpringDemoApp.jar
-            git remote add origin http://githubtoken@github.com/pradeepln08/SpringDemoApp.git
-            git commit -m 'files changed'            
-            git push
-            
-       #Start-Process java -Argumentlist '-jar' , 'SpringDemoApp.jar' -wait -RedirectStandardOutput '.\console.out' -RedirectStandardError '.\console.err'                                     
+          cd target             
+          pwd
+          copy SpringDemoApp.jar C:\Users\91984\Documents\GitHub\SpringDemoApp\target 
+          git add SpringDemoApp.jar
+          git remote add origin github@github.com/pradeepln08/SpringDemoApp.git
+          git commit -m 'files changed'            
+          git push
+
+        #Start-Process java -Argumentlist '-jar' , 'SpringDemoApp.jar' -wait -RedirectStandardOutput '.\console.out' -RedirectStandardError '.\console.err'
