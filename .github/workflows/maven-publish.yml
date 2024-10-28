@@ -32,7 +32,6 @@ jobs:
             pwd
             copy SpringDemoApp.jar C:\Users\91984\Documents\GitHub\SpringDemoApp\target 
             git add SpringDemoApp.jar
-            git commit -m 'files changed'
-            git remote add origin https://${{secrets.GITHUBTOKEN}}@github.com/pradeepln08/SpringDemoApp.git
-            git push -u origin main
+            git commit -m 'files changed'            
+            git push
        #Start-Process java -Argumentlist '-jar' , 'SpringDemoApp.jar' -wait -RedirectStandardOutput '.\console.out' -RedirectStandardError '.\console.err'                                     
