@@ -26,7 +26,7 @@ jobs:
         run: mvn -B package --file pom.xml
         
       - name: Working Directory
-        run: echo "$gittoken"       
+        run: echo $token       
         
       - name: Go to target folder
         run: |
