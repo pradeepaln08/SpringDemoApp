@@ -22,7 +22,7 @@ jobs:
           id: build-docker-image
           run: |
             ls -la 
-            docker build . -f Dockerfile -t pradeepln08/springdemoapp:latest
+            docker build . -f Dockerfile -t pradeepln08/SpringDemoApp:latest
         - name: push the docker image
           id: push-docker-image
           run: docker push ${{secrets.DOCKERHUB_USERNAME}}/springdemoapp-1:latest
