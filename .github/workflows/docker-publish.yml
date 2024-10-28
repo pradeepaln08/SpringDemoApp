@@ -1,6 +1,6 @@
 name: Build Docker Image
 on:
-  push:
+  watch:
     branches:
       - main
 jobs:
