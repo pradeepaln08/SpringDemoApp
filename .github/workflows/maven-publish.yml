@@ -26,17 +26,8 @@ jobs:
       - name: Working Directory
         run: pwd
         
-      - name: Move to target folder
+      - name: Go to target folder
         run: |
-            cd target            
-             #Start-Process java -Argumentlist '-jar' , 'SpringDemoApp.jar' -wait -RedirectStandardOutput '.\console.out' -RedirectStandardError '.\console.err'
-              copy SpringDemoApp.jar C:\Users\91984\Documents\GitHub\SpringDemoApp\target\
-              
-      - name: Commit the jar to target folder
-        run : |
-               cd/
-               cd C:\Users\91984\Documents\GitHub\SpringDemoApp\target\
-               pwd
-               commit -m "Updated" 
-
-               
+            cd target         
+            pwd
+       #Start-Process java -Argumentlist '-jar' , 'SpringDemoApp.jar' -wait -RedirectStandardOutput '.\console.out' -RedirectStandardError '.\console.err'                                     
