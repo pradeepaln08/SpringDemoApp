@@ -25,4 +25,4 @@ jobs:
             docker build . -f Dockerfile -t pradeepln08/SpringDemoApp:latest
         - name: push the docker image
           id: push-docker-image
-          run: docker push ${{secrets.DOCKERHUB_USERNAME}}/ocp-test-1:latest
+          run: docker push ${{secrets.DOCKERHUB_USERNAME}}/SpringDemoApp:latest
