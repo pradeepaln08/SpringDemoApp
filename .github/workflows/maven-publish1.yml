@@ -34,12 +34,12 @@ jobs:
     - name: Move to target directory
       run: |
             cd target
-            git config --global user.name "pradeepln08" 
+            git config --global user.name "pradeepaln08" 
             git config --global user.email "pradeepln08@gmail.com" 
             git add . 
             git status 
             git commit -am "yml commit success"
-            echo https://${{secrets.GITHUBTOKEN}}@github.com/pradeepln08/springdemoapp.git 
-            git remote set-url origin https://${{secrets.GITHUBTOKEN}}@github.com/pradeepln08/springdemoapp.git 
+            echo https://${{secrets.GITHUBTOKEN}}@github.com/pradeepaln08/springdemoapp.git 
+            git remote set-url origin https://${{secrets.GITHUBTOKEN}}@github.com/pradeepaln08/springdemoapp.git 
             git push
       
