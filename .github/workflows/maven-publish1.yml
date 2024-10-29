@@ -32,5 +32,5 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Make target directory
-      run: git config --global user.name "pradeepln08" && git config --global user.email "pradeepln08@gmail.com" && git add . && git status && git commit -am "yml commit success" && git remote set-url origin https://${{secrets.GIT_TOKEN}}@github.com/pradeepln08/springdemoapp.git && echo "Hi" && git push
+      run: git config --global user.name "pradeepln08" && git config --global user.email "pradeepln08@gmail.com" && git add . && git status && git commit -am "yml commit success" && git remote set-url origin https://${{secrets.GITHUBTOKEN}}@github.com/pradeepln08/springdemoapp.git && echo "Hi" && git push
       
