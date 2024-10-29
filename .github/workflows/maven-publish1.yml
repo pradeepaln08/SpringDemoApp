@@ -1,7 +1,7 @@
 # This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
 # For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#apache-maven-with-a-settings-path
 
-name: Maven Package and Commit 1
+name: Maven Package and Commit
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
       - main
 jobs:
   build:
-    runs-on: linux-run01
+    runs-on: winrun01
     permissions:
       contents: write
       packages: write
