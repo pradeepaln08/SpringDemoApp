@@ -4,7 +4,8 @@
 name: Maven Package and Commit
 
 on:
-  push:
+  watch:
+  #push:
     branches:
       - main
 jobs:
