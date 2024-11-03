@@ -1,0 +1,29 @@
+name: Manual Input
+on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
+      changeticket:
+        description: 'Change Ticket Number'
+        required: true
+      environment:
+        description: 'Environment'
+        required: true
+        default: 'SIT'
+      dbReq:
+        description: 'DB Required'
+        required: true
+        default: 'YES'
+
+jobs:
+    build:
+      name: manual entry test
+      runs-on: linux-run01
+      steps:
+        - name: first step to print parameter
+          id: build-docker-image
+          run: |
+            ls -la && echo "Hello" && echo ${{ github.event.inputs.changeticket }} && echo ${{ github.event.inputs.environment }}
